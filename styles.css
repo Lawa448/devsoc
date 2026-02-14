@@ -1,0 +1,214 @@
+@font-face {
+
+    font-family: sprinkleColours;
+    src: url("./assets/sprinklescolors-font/Sprinklescolors-njrJ.ttf");
+}
+
+@font-face {
+    font-family: EstieBestie;
+    src: url("./assets/estie-bestie-font/EstieBestieRegular-R9elW.ttf");
+}
+
+* {
+    font-family: EstieBestie, sprinkleColours;
+}
+body{
+    background-color: rgb(219, 210, 210);
+}
+
+h1 {
+    color: rgb(65, 63, 95);
+    text-align: center;
+}
+
+.room {
+    background-color: rgb(240, 236, 230);
+    width: 80%;
+    max-width: 900px;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.controls {
+    background-image: url("assets/Screenshot\ 2026-02-14\ at\ 2.49.50\ pm.png");
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 30px 15px;
+}
+
+.controls button {
+    font-size: 1em;
+    background-color: rgb(197, 229, 184);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 16px;
+    opacity: 0.7;
+    position: relative;
+    cursor: pointer;
+    overflow: visible;
+}
+
+.controls button::after {
+    content: '';
+    position: absolute;
+    bottom: -9px;
+    left: 0px;
+    width: 0px;
+    height: 6px;
+    transition: width 0.7s;
+    border-radius: 50px;
+}
+
+.controls button:hover::after {
+    width: 100%;
+    background-color: rgb(197, 164, 121);
+}
+
+.two-column-split {
+    display: grid;
+    gap: 10px;
+    margin-top: 10px;
+
+    @media(width > 600px) {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.hero-text {
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Vertically center */
+    justify-content: center;
+    /* Horizontally center */
+    gap: 180px;
+    padding: 20px;
+}
+
+.window {
+    position: relative;
+    margin-top: 20px;
+    overflow: hidden;
+    aspect-ratio: 1/1;
+    border-radius: 5px;
+    /* border: 10px solid rgb(158, 118, 95); */
+}
+
+.outside {
+    position: absolute;
+    width: 60%;
+    height: 80%;
+    top: 10%;
+    left: 20%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.window::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(assets/vecteezy_open-window-frame-with-scenic-view-on-transparent-background_54197429.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.text-box {
+    border: 2px rgb(147, 130, 104) dashed;
+    padding: 30px;
+    opacity: 0.7;
+    font-size: 20px;
+    height: fit-content;
+    max-width: 100%;
+    margin-top: 50px;
+
+}
+
+.gallery {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.sticky-note {
+    position: relative;
+    width: 200px;
+    height: 180px;
+    min-width: 200px;
+    min-height: 180px;
+    background-image: url('assets/cat_images/Screenshot\ 2026-02-14\ at\ 5.10.16\ pm.png');
+    background-size: cover;
+    background-position: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: flex-end;
+    gap: 0px;
+}
+
+.sticky-note img {
+    width: 70%;
+    height: 70%;
+    margin-left: 10px;
+    object-fit: contain;
+    padding: 0px
+}
+
+.sticky-note-text {
+    position: absolute;
+    left: 50px;
+    top: 90px;
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+.sticky-note2 {
+    position: relative;
+    width: 280px;
+    /* Increase width */
+    height: 200px;
+    min-width: 280px;
+    min-height: 200px;
+    background-image: url('assets/hobbies/cf95fdc211dcde558fae758a5b429106.png');
+    /* Your sticky note image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    gap: 0px;
+}
+
+.sticky-note2 img {
+    width: 60%;
+    /* Adjust to fit smaller note */
+    height: 70%;
+    object-fit: contain;
+    padding: 30px
+}
+
+i {
+    font-size: 24px;
+    color: black;
+    margin-right: 10px;
+}
+
+a {
+    text-decoration: none;
+}
